@@ -1,0 +1,13 @@
+h1 {
+  background-color: aqua;
+  box-sizing: border-box;
+  margin: 0;
+}
+h2 {
+  background-color: aquamarine;
+  margin: 0;
+}
+
+.flex-box {
+  display: flex;
+}

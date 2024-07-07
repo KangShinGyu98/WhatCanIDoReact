@@ -1,8 +1,6 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 import Sidebar from "./components/sidebar";
+import { GridContainer } from "./components/GridContainer";
 
 function App() {
   return (
@@ -11,13 +9,17 @@ function App() {
         <h1>My Coding Space</h1>
         <h2>Code what I want</h2>
       </header>
-      <aside className="sideBar">
-        <Sidebar />
-      </aside>
-      <main className="main"></main>
+      <div className="flex-box">
+        <aside className="sideBar">
+          <Sidebar />
+        </aside>
+        <main className="main">
+          <h1> title</h1>
+          <GridContainer />
+        </main>
+      </div>
     </>
   );
 }
 
 export default App;
-c;
