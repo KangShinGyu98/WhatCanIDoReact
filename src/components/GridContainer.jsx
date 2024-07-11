@@ -5,8 +5,8 @@ export const GridContainer = () => {
     display: "grid",
     gap: "10px",
     padding: "10px",
-    gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))",
     backgroundColor: "pink",
+    "grid-template-columns": "auto auto auto",
   };
   return (
     <div style={containerStyle}>
