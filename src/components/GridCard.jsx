@@ -7,6 +7,7 @@ const itemStyle = {
   padding: "20px",
   textAlign: "center",
   fontSize: "18px",
+  height: "150px",
 };
 
 export const GridCard = () => {

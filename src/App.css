@@ -3,6 +3,9 @@ h1 {
   box-sizing: border-box;
   margin: 0;
 }
+header {
+  text-align: center;
+}
 h2 {
   background-color: aquamarine;
   margin: 0;

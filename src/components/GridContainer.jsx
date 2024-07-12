@@ -19,6 +19,12 @@ export const GridContainer = () => {
       <GridCard />
       <GridCard />
       <GridCard />
+      <GridCard />
+      <GridCard />
+      <GridCard />
+      <GridCard />
+      <GridCard />
+      <GridCard />
     </div>
   );
 };

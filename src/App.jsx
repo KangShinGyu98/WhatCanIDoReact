@@ -10,11 +10,13 @@ function App() {
         <h2>Code what I want</h2>
       </header>
       <div className="flex-box">
-        <aside className="sideBar">
+        <aside className="sideBar" style={{ backgroundColor: "gray", minWidth: "100px" }}>
           <Sidebar />
         </aside>
-        <main className="main">
+        <main className="main" style={{ backgroundColor: "violet", width: "100%" }}>
           <h1> title</h1>
+          <GridContainer />
+          <h1> title2</h1>
           <GridContainer />
         </main>
       </div>
