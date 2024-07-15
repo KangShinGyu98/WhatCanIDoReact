@@ -1,6 +1,7 @@
 import "./App.css";
-import Sidebar from "./components/sidebar";
+import { LeftMenu } from "./components/LeftMenu";
 import { GridContainer } from "./components/GridContainer";
+import { RightSideBar } from "./components/RightSideBar";
 
 function App() {
   return (
@@ -10,8 +11,8 @@ function App() {
         <h2>Code what I want</h2>
       </header>
       <div className="flex-box">
-        <aside className="sideBar" style={{ backgroundColor: "gray", minWidth: "100px" }}>
-          <Sidebar />
+        <aside className="side-bar">
+          <LeftMenu />
         </aside>
         <main className="main" style={{ backgroundColor: "violet", width: "100%" }}>
           <h1> title</h1>
@@ -19,6 +20,9 @@ function App() {
           <h1> title2</h1>
           <GridContainer />
         </main>
+        <aside className="">
+          <RightSideBar />
+        </aside>
       </div>
     </>
   );

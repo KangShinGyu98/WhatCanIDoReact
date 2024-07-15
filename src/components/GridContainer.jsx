@@ -6,7 +6,7 @@ export const GridContainer = () => {
     gap: "10px",
     padding: "10px",
     backgroundColor: "pink",
-    "grid-template-columns": "auto auto auto",
+    "grid-template-columns": "repeat(auto-fit, minmax(400px, 1fr))",
   };
   return (
     <div style={containerStyle}>

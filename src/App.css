@@ -1,16 +1,36 @@
 h1 {
   background-color: aqua;
   box-sizing: border-box;
+  width: 100%;
   margin: 0;
 }
 header {
   text-align: center;
 }
 h2 {
+  width: 100%;
   background-color: aquamarine;
   margin: 0;
 }
 
 .flex-box {
   display: flex;
+  width: 100%;
+}
+
+:root {
+  --sidebar-margin-left: 0px;
+}
+
+.side-bar {
+  background-color: yellow;
+  min-width: 100px;
+  position: sticky;
+  top: 0;
+  margin-left: var(--sidebar-margin-left);
+}
+@media (min-width: 1800px) {
+  :root {
+    --sidebar-margin-left: calc((100vw - 1800px) / 2);
+  }
 }
