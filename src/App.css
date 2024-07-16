@@ -13,24 +13,32 @@ h2 {
   margin: 0;
 }
 
-.flex-box {
+.flexBox {
   display: flex;
   width: 100%;
 }
 
-:root {
-  --sidebar-margin-left: 0px;
-}
-
-.side-bar {
+.leftMenu {
   background-color: yellow;
-  min-width: 100px;
+  min-width: 160px;
+  height: 100px;
   position: sticky;
   top: 0;
-  margin-left: var(--sidebar-margin-left);
 }
+.rightSideBar {
+  background-color: gray;
+  min-width: 300px;
+}
+.main {
+  background-color: violet;
+  width: 100%;
+}
+
 @media (min-width: 1800px) {
-  :root {
-    --sidebar-margin-left: calc((100vw - 1800px) / 2);
+  .leftMenu {
+    margin-left: calc((100vw - 1800px));
+  }
+  .rightSideBar {
+    margin-right: calc((100vw - 1800px));
   }
 }

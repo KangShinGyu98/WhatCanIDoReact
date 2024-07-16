@@ -10,17 +10,17 @@ function App() {
         <h1>My Coding Space</h1>
         <h2>Code what I want</h2>
       </header>
-      <div className="flex-box">
-        <aside className="side-bar">
+      <div className="flexBox">
+        <aside className="leftMenu">
           <LeftMenu />
         </aside>
-        <main className="main" style={{ backgroundColor: "violet", width: "100%" }}>
+        <main className="main">
           <h1> title</h1>
           <GridContainer />
           <h1> title2</h1>
           <GridContainer />
         </main>
-        <aside className="">
+        <aside className="rightSideBar">
           <RightSideBar />
         </aside>
       </div>
