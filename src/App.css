@@ -42,7 +42,19 @@ h2 {
     margin-right: calc((100vw - 1800px));
   }
 }
-
+@media only screen and (max-width: 800px) {
+  .rightSideBar {
+    display: none;
+  }
+}
+@media only screen and (max-width: 600px) {
+  /* .leftMenu {
+    display: none;
+  } */
+  .flexBox {
+    display: contents;
+  }
+}
 
 /* 1500 에 4->3 
   1200 에 3->2

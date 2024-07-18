@@ -6,3 +6,57 @@
   grid-template-columns: repeat(4, minmax(0, 1fr));
   column-gap: 4%;
 }
+
+@media only screen and (max-width: 600px) {
+  .gridContainer {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+@media only screen and (min-width: 600px) {
+  .gridContainer {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .gridContainer {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media only screen and (min-width: 1500px) {
+  .gridContainer {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+/* @media only screen and (min-width: 800px) {
+  .gridContainer {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+} */
+
+/* @media only screen and (min-width: 600px) {
+  .gridContainer {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+} */
+
+/* 1500 에 4->3 
+  1200 에 3->2
+  800에 right 날리고
+  600에 left 날릭ㅎ
+*/
+
+/* Extra small devices (phones, 600px and down) */
+/* @media only screen and (max-width: 600px) {...} */
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* @media only screen and (min-width: 600px) {...} */
+
+/* Medium devices (landscape tablets, 768px and up) */
+/* @media only screen and (min-width: 768px) {...} */
+
+/* Large devices (laptops/desktops, 992px and up) */
+/* @media only screen and (min-width: 992px) {...} */
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* @media only screen and (min-width: 1200px) {...} */
