@@ -1,29 +1,17 @@
 import "./App.css";
-import { LeftMenu } from "./components/LeftMenu";
-import { GridContainer } from "./components/GridContainer";
-import { RightSideBar } from "./components/RightSideBar";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { MainPage } from "./components/mainPage";
+import { NotFound } from "./components/NotFound";
 
 function App() {
   return (
     <>
-      <header>
-        <h1>My Coding Space</h1>
-        <h2>Code what I want</h2>
-      </header>
-      <div className="flexBox">
-        <aside className="leftMenu">
-          <LeftMenu />
-        </aside>
-        <main className="main">
-          <h1> title</h1>
-          <GridContainer />
-          <h1> title2</h1>
-          <GridContainer />
-        </main>
-        <aside className="rightSideBar">
-          <RightSideBar />
-        </aside>
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
