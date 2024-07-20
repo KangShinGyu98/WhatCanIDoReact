@@ -1,62 +1,37 @@
 .gridContainer {
   display: grid;
-  gap: 10px;
-  padding: 10px;
+  box-sizing: border-box;
+  grid-gap: 20px 20px;
+  padding: 20px;
   background-color: pink;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  column-gap: 4%;
+  width: 100%;
+  justify-content: space-evenly;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-auto-rows: 320px;
 }
 
-@media only screen and (max-width: 600px) {
-  .gridContainer {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-  }
+.gridCard {
+  background-color: chartreuse;
+  border-radius: 5%;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  /* margin: 10%; */
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
-@media only screen and (min-width: 600px) {
-  .gridContainer {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+
+.gridImage {
+  background: white url("../assets/griditem.png") no-repeat left top;
+  border-radius: 5%;
+  height: 280px;
+
+  /* background-image: url("../assets/griditem.png");
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-attachment: fixed; */
 }
 
-@media only screen and (min-width: 1200px) {
-  .gridContainer {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
+.gridTitle {
 }
-@media only screen and (min-width: 1500px) {
-  .gridContainer {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-}
-/* @media only screen and (min-width: 800px) {
-  .gridContainer {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-} */
-
-/* @media only screen and (min-width: 600px) {
-  .gridContainer {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-} */
-
-/* 1500 에 4->3 
-  1200 에 3->2
-  800에 right 날리고
-  600에 left 날릭ㅎ
-*/
-
-/* Extra small devices (phones, 600px and down) */
-/* @media only screen and (max-width: 600px) {...} */
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-/* @media only screen and (min-width: 600px) {...} */
-
-/* Medium devices (landscape tablets, 768px and up) */
-/* @media only screen and (min-width: 768px) {...} */
-
-/* Large devices (laptops/desktops, 992px and up) */
-/* @media only screen and (min-width: 992px) {...} */
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-/* @media only screen and (min-width: 1200px) {...} */
