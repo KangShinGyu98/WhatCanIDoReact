@@ -19,12 +19,16 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
-  transition: all 0.3s ease;
 }
 /* .gridCard:hover {
   grid-column: 1 / -1;
 } */
 
+.gridCard clicked {
+  transition: all 0.3s ease;
+  grid-column: 1 / -1;
+  height: 56.25%;
+}
 .gridImage {
   background: white url("../assets/griditem.png") no-repeat left top;
   border-radius: 5%;

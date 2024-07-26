@@ -1,1 +1,4 @@
 /* gridContainer.css 에 명시됨 */
+.gridCard {
+  cursor: pointer;
+}
