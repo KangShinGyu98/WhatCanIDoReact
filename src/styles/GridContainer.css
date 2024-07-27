@@ -7,35 +7,6 @@
   width: 100%;
   justify-content: space-evenly;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  grid-auto-rows: 320px;
-}
-
-.gridCard {
-  background-color: chartreuse;
-  border-radius: 5%;
-  display: flex;
-  flex-direction: column;
-  /* margin: 10%; */
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-/* .gridCard:hover {
-  grid-column: 1 / -1;
-} */
-
-.gridCard clicked {
-  transition: all 0.3s ease;
-  grid-column: 1 / -1;
-  height: 56.25%;
-}
-.gridImage {
-  background: white url("../assets/griditem.png") no-repeat left top;
-  border-radius: 5%;
-  height: 280px;
-
-  /* background-image: url("../assets/griditem.png");
-  background-repeat: no-repeat;
-  background-position: left top;
-  background-attachment: fixed; */
+  transition: "all 0.3s ease";
+  grid-auto-rows: minmax(320px, min-content);
 }

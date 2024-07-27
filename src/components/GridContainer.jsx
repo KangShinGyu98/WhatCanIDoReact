@@ -1,16 +1,14 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import "../styles/gridContainer.css";
 import { GridCard } from "./GridCard";
-import gridItems from "../assets/gridItems";
+import gridItems from "../../public/assets/gridItems";
 
-const hanleClick = () => {
-  console.log("remove same row = add css hidden");
-};
 export const GridContainer = () => {
+  const containerRef = useRef(null);
   return (
-    <div className="gridContainer">
+    <div ref={containerRef} className="gridContainer">
       {gridItems.map((item, index) => (
-        <GridCard key={item.id} content={item.content} hanleClick={() => hanleClick()} />
+        <GridCard containerRef={containerRef} key={item.id} content={item.content} />
       ))}
     </div>
   );
