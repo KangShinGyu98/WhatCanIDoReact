@@ -6,7 +6,6 @@ export const GridCard = ({ containerRef, content }) => {
   const cardRef = useRef(null);
   const [isClicked, setIsClicked] = useState(false);
   const hanleClick = () => {
-    console.log(containerRef.current.offsetWidth);
     setIsClicked(!isClicked);
   };
   useEffect(() => {
@@ -24,8 +23,7 @@ export const GridCard = ({ containerRef, content }) => {
     flexDirection: "column",
     width: "100%",
     overflow: "hidden",
-
-    cursor: "pointer",
+    cursor: isClicked ? "" : "pointer",
   };
 
   const gridCardImageStyle = {
@@ -33,13 +31,32 @@ export const GridCard = ({ containerRef, content }) => {
     height: "90%",
     // height: "280px",
   };
+  const titleContainerStyle = {
+    backgroundColor: "lavender",
+    display: "flex",
+    justifyContent: "space-between",
+  };
+  const closeStyle = {
+    backgroundColor: "magenta",
+    cursor: "pointer",
+  };
   return (
     <>
-      <div ref={cardRef} className="gridCard" onClick={() => hanleClick()} style={gridCardStyle}>
+      <div
+        ref={cardRef}
+        className="gridCard"
+        onClick={isClicked ? undefined : () => hanleClick()}
+        style={gridCardStyle}
+      >
         <div className="gridImage" style={gridCardImageStyle}>
           GridCard
         </div>
-        <div className="gridTitle">Title</div>
+        <div className="titleContainer" style={titleContainerStyle}>
+          <div className="gridTitle">Title</div>
+          <div onClick={() => hanleClick()} style={closeStyle} className="closeButton">
+            close
+          </div>
+        </div>
       </div>
     </>
   );
