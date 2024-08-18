@@ -40,24 +40,50 @@ export const GridCard = ({ containerRef, content }) => {
     backgroundColor: "magenta",
     cursor: "pointer",
   };
-  return (
-    <>
-      <div
-        ref={cardRef}
-        className="gridCard"
-        onClick={isClicked ? undefined : () => hanleClick()}
-        style={gridCardStyle}
-      >
-        <div className="gridImage" style={gridCardImageStyle}>
-          GridCard
-        </div>
-        <div className="titleContainer" style={titleContainerStyle}>
-          <div className="gridTitle">Title</div>
-          <div onClick={() => hanleClick()} style={closeStyle} className="closeButton">
-            close
+  const contentContainer = {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    height: "90%",
+    backgroundColor: "gray",
+  };
+
+  if (isClicked) {
+    return (
+      <>
+        <div
+          ref={cardRef}
+          className="gridCard"
+          onClick={isClicked ? undefined : () => hanleClick()}
+          style={gridCardStyle}
+        >
+          <div style={contentContainer}>{content}</div>
+          <div className="titleContainer" style={titleContainerStyle}>
+            <div className="gridTitle">Title</div>
+            <div onClick={() => hanleClick()} style={closeStyle} className="closeButton">
+              close
+            </div>
           </div>
         </div>
-      </div>
-    </>
-  );
+      </>
+    );
+  } else {
+    return (
+      <>
+        <div
+          ref={cardRef}
+          className="gridCard"
+          onClick={isClicked ? undefined : () => hanleClick()}
+          style={gridCardStyle}
+        >
+          <div className="gridImage" style={gridCardImageStyle}>
+            GridCard
+          </div>
+          <div className="titleContainer" style={titleContainerStyle}>
+            <div className="gridTitle">Title</div>
+          </div>
+        </div>
+      </>
+    );
+  }
 };
