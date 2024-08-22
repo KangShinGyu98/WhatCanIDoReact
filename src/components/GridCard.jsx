@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import "../styles/gridCard.css";
 
-export const GridCard = ({ containerRef, content }) => {
+export const GridCard = ({ containerRef, content, imagePath }) => {
   //Component 를 인자로 받아서 hover 되면 Component 를 보여주는 코드
   const cardRef = useRef(null);
   const [isClicked, setIsClicked] = useState(false);
@@ -27,7 +27,7 @@ export const GridCard = ({ containerRef, content }) => {
   };
 
   const gridCardImageStyle = {
-    background: `white url("/assets/griditem.png") no-repeat left top`,
+    background: `white url(${imagePath}) no-repeat left top`,
     height: "90%",
     // height: "280px",
   };

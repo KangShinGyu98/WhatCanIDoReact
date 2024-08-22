@@ -1,4 +1,6 @@
 button {
+  user-select: none;
+
   justify-content: "center";
   align-items: "center";
 
