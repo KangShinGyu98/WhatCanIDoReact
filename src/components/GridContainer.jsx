@@ -5,7 +5,7 @@ import { NeubrutalButton } from "./InnerComponents/NeubrutalButton";
 import { NavBar } from "./InnerComponents/NavBar";
 const gridItems = [
   { id: 0, content: <NeubrutalButton />, imagePath: "./assets/neubrutalButton.png" },
-  { id: 1, content: <NavBar />, imagePath: "./assets/griditem.png" },
+  { id: 1, content: <NavBar />, imagePath: "./assets/navBar.png" },
 ];
 
 export const GridContainer = () => {
