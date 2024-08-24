@@ -46,6 +46,7 @@ export const GridCard = ({ containerRef, content, imagePath }) => {
     alignItems: "center",
     height: "90%",
     backgroundColor: "gray",
+    zIndex: "1",
   };
 
   if (isClicked) {

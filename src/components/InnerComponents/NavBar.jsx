@@ -24,7 +24,14 @@ export const NavBar = () => {
           class: "sideMenu",
           sideMenu: [
             { label: "UI/UX Design", class: "menu" },
-            { label: "Graphic Design", class: "menu" },
+            {
+              label: "Design",
+              class: "sideMenu",
+              sideMenu: [
+                { label: "UI/UX Design", class: "menu" },
+                { label: "Graphic Design", class: "menu" },
+              ],
+            },
           ],
         },
       ],

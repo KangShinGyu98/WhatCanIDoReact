@@ -1,8 +1,10 @@
-body {
+.background {
   background-color: #3795bd;
+  width: 100%;
+  height: 100%;
 }
 nav {
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
@@ -14,7 +16,7 @@ nav {
 nav > ul {
   margin: 0;
   padding: 0;
-  width: 100vw;
+  width: 100%;
   height: 100%;
   display: flex;
   justify-content: space-around;
@@ -41,13 +43,17 @@ nav > ul .menu-item {
 }
 
 .sideMenu > ul {
-  display: none;
+  display: flex;
   position: absolute;
   width: 100%;
   left: 100%;
   top: 0;
 
   flex-direction: column;
+  transition: opacity 0.5s ease, max-height 0.5s ease, background-color 0.5s ease;
+  opacity: 0;
+  max-height: 0;
+  background-color: transparent;
 }
 
 .dropDownMenu > ul {
@@ -84,4 +90,9 @@ nav > ul .menu-item {
 .sideMenu:hover > ul li:hover,
 .dropDownMenu:hover > ul li:hover {
   background-color: #3a1078;
+}
+
+.sideMenu > i {
+  position: absolute;
+  right: 0;
 }

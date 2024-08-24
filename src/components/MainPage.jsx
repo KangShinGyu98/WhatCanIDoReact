@@ -17,8 +17,8 @@ export const MainPage = () => {
         <main className="main">
           <h1> title</h1>
           <GridContainer />
-          <h1> title2</h1>
-          <GridContainer />
+          {/* <h1> title2</h1>
+          <GridContainer /> */}
         </main>
         <aside className="rightSideBar">
           <RightSideBar />
