@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom";
 import { MainPage } from "./components/mainPage";
 import { NotFound } from "./components/NotFound";
 import { GridCard } from "./components/GridCard";
@@ -8,7 +8,7 @@ import { DropDownMenu } from "./components/InnerComponents/DropDownMenu";
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/GridCard" element={<GridCard />} />
@@ -16,7 +16,7 @@ function App() {
 
           <Route path="*" element={<NotFound />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 }
