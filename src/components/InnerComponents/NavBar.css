@@ -1,0 +1,87 @@
+body {
+  background-color: #3795bd;
+}
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: aquamarine;
+  margin: 0;
+  padding: 0;
+  height: 50px;
+}
+nav > ul {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  background-color: #3a1078;
+}
+nav > ul .menu-item {
+  display: flex;
+  width: 100%;
+  max-width: 200px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  color: white;
+  box-sizing: border-box;
+}
+.menu-item:hover {
+  box-shadow: inset 0 0 5px black;
+}
+.dropDownMenu,
+.sideMenu {
+  position: relative;
+}
+
+.sideMenu > ul {
+  display: none;
+  position: absolute;
+  width: 100%;
+  left: 100%;
+  top: 0;
+
+  flex-direction: column;
+}
+
+.dropDownMenu > ul {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  flex-direction: column;
+  transition: opacity 0.5s ease, max-height 0.5s ease, background-color 0.5s ease;
+  opacity: 0;
+  max-height: 0;
+  background-color: transparent;
+}
+
+.sideMenu:hover > ul,
+.dropDownMenu:hover > ul {
+  opacity: 1;
+  max-height: 500px;
+  background-color: #4e31aa;
+}
+.sideMenu ul li,
+.dropDownMenu ul li {
+  text-align: center;
+  border-bottom: 2px solid #3a1078; /* 서브메뉴 항목 간의 구분선 */
+  border-left: 2px solid #3a1078;
+  border-right: 2px solid #3a1078;
+}
+.sideMenu:hover > ul li,
+.dropDownMenu:hover > ul li {
+  height: 50px;
+}
+
+.sideMenu:hover > ul li:hover,
+.dropDownMenu:hover > ul li:hover {
+  background-color: #3a1078;
+}
