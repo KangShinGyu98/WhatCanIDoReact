@@ -15,10 +15,10 @@ export const MainPage = () => {
           <LeftMenu />
         </aside>
         <main className="main">
-          <h1> title</h1>
+          <h1> Components</h1>
           <GridContainer />
-          {/* <h1> title2</h1>
-          <GridContainer /> */}
+          <h1> Websites</h1>
+          <GridContainer />
         </main>
         <aside className="rightSideBar">
           <RightSideBar />

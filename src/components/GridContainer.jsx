@@ -1,13 +1,7 @@
 import React, { useRef, useState } from "react";
 import "../styles/gridContainer.css";
 import { GridCard } from "./GridCard";
-import { NeubrutalButton } from "./InnerComponents/NeubrutalButton";
-import { NavBar } from "./InnerComponents/NavBar";
-const gridItems = [
-  { id: 0, content: <NeubrutalButton />, imagePath: "./assets/neubrutalButton.png" },
-  { id: 1, content: <NavBar />, imagePath: "./assets/navBar.png" },
-];
-
+import { gridItems } from "./GridItems";
 export const GridContainer = () => {
   const containerRef = useRef(null);
   return (

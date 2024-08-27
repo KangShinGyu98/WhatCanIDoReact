@@ -10,12 +10,17 @@ h1 {
   margin: 0;
 }
 header {
-  text-align: center;
+  text-align: left;
+  /* padding-left: 20px; */
 }
 h2 {
   width: 100%;
   background-color: aquamarine;
   margin: 0;
+}
+header > h1,
+header > h2 {
+  padding-left: 20px;
 }
 
 .flexBox {
@@ -28,7 +33,12 @@ h2 {
   min-width: 160px;
   height: 100px;
   position: sticky;
+  padding-left: 20px;
   top: 0;
+}
+.leftMenu ul li {
+  list-style: none;
+  padding-left: 10px;
 }
 .rightSideBar {
   min-width: 300px;
@@ -39,6 +49,7 @@ h2 {
 }
 
 @media (min-width: 1800px) {
+  header,
   .leftMenu {
     margin-left: calc((100vw - 1800px));
   }
